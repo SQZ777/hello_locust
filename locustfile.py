@@ -12,7 +12,6 @@ class Actions(TaskSet):
 
     def on_stop(self):
         print("bye bye {}".format(self.number))
-        pass
     
     @task(100)
     def say(self):
