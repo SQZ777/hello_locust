@@ -14,9 +14,13 @@ class Actions(TaskSet):
         print("bye bye {}".format(self.number))
         pass
     
-    @task
+    @task(100)
     def say(self):
         print("Hello {}".format(self.number))
+
+    @task(5)
+    def running(self):
+        print("Running {}".format(self.number))
 
 
 class ActionUser(Locust):
